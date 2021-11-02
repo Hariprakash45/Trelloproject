@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load static %}
+{% block body_block %}
+
+
+
+<div class="main">
+
+             <h3>Task for particular user</h3>
+             <strong>Username:</strong> {{ data.Username}}<br/>
+             <strong>Categorie_Name:</strong> {{ data.Categorie_Name }}<br/>
+             <strong>Title:</strong> {{ data.Title}}<br/>
+             <strong>Start_Date:</strong> {{ data.Start_Date}}<br/>
+             <strong>End_Date:</strong> {{ data.End_Date}}<br/>
+             <strong>Description:</strong>{{ data.Description}}<br/>
+ 
+ 
+</div>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load static %}
+{% block body_block %}
+
+
+
+<div class="main">
+    <!-- Create a Form -->
+           
+
+    <form method="POST">
+        <!-- Security token by Django -->
+        {% csrf_token %}
+        
+        <strong>Username:</strong> {{ data.Username}}<br/>
+        <strong>Categorie_Name:</strong> {{ data.Categorie_Name }}<br/>
+        <strong>Title:</strong> {{ data.Title}}<br/>
+        <strong>Start_Date:</strong> {{ data.Start_Date}}<br/>
+        <strong>End_Date:</strong> {{ data.End_Date}}<br/>
+        <strong>Description:</strong>{{ data.Description}}<br/>
+
+       <br/> Are you want to delete this item ?
+        <input type="submit" value="Yes" />
+        <a href="/">Cancel </a>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load static %}
+{% block body_block %}
+<div class="main">
+<h1>Categorieslist</h1>
+
+
+      {% for data in dataset %}
+        
+           <ul>
+            <strong> Categorie_Name:</strong> {{ data.Categorie_Name}}<br/>
+            <strong> Username:</strong> {{ data.Username}}<br/>
+
+
+          </ul>
+        
+     {% endfor %}
+ 
+       
+
+</div>
+
+{% endblock %}

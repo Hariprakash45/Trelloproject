@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load static %}
+{% block body_block %}
+
+
+
+<div class="main">
+    <!-- Create a Form -->
+    <form method="POST">
+        <!-- Security token by Django -->
+        {% csrf_token %}
+        <strong> Categorie_Name:</strong> {{ data.Categorie_Name}}<br/>
+        <strong> Username:</strong> {{ data.Username}}<br/>
+         <br/> Are you want to delete this item ?
+        <input type="submit" value="Yes" />
+        <a href="/">Cancel </a>
+    </form>
+</div>
+{% endblock %}
